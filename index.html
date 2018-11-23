@@ -1,1 +1,17 @@
 <h1 id="welcome">Nodes App<h1>
+  <form class="" action="/notes" method="post">
+    <input type="text" id="enterNote" name="note" value="" placeholder="Enter Note">
+    <input type="submit" id="createNote"name="createNote" value="Create Note">
+  </form>
+
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+<div class="notes">
+<script src="main.js"></script>
+</div>

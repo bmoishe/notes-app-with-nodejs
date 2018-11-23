@@ -20,3 +20,19 @@ describe('Does the page render', done => {
     .to.eventually.contain('Nodes App');
   })
 })
+
+describe('Does the page render', done => {
+  before(done => {
+    driver.get('http://localhost:3003')
+    driver.findElement(By.id("enterNote")).sendKeys("My Note");
+    driver.findElement(By.id('createNote')).click()
+    done();
+  });
+
+  it('Creates a note', () => {
+    console.log('Ready to read welcome message');
+    return expect(driver.findElement(By.id('notes')).getAttribute('innerHTML'))
+    .to.eventually.contain('My Note')
+  });
+
+});
