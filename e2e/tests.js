@@ -24,14 +24,14 @@ describe('Does the page render', done => {
 describe('Does the page render', done => {
   before(done => {
     driver.get('http://localhost:3003')
-    .then(findElement(By.id('enterNote')).sendKeys('My Note'))
-    .then(findElement(By.id('createNote')).click())
+    driver.findElement(By.id("enterNote")).sendKeys("My Note");
+    driver.findElement(By.id('createNote')).click()
     done();
   });
 
   it('Creates a note', () => {
     console.log('Ready to read welcome message');
-    return expect(driver.findElement(By.id('note')).getAttribute('innerHTML'))
+    return expect(driver.findElement(By.id('notes')).getAttribute('innerHTML'))
     .to.eventually.contain('My Note')
   });
 
