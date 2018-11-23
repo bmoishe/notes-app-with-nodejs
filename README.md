@@ -3,7 +3,7 @@
 ## User Stories:
 
 I have used the User Stories from a previous Makers project (
-![Notes App](https://github.com/makersacademy/course/blob/master/further_javascript/notes_app_user_stories.md ) )
+[Notes App](https://github.com/makersacademy/course/blob/master/further_javascript/notes_app_user_stories.md ) )
 
 ```
 As a programmer
